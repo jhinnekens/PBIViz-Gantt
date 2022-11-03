@@ -1,0 +1,104 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Category1",
+            "name": "category1",
+            "displayNameKey": "Visual_Category",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Category2",
+            "name": "category2",
+            "displayNameKey": "Visual_Category2",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "MilestoneTaskName",
+            "name": "MilestoneTaskName",
+            "displayNameKey": "Visual_Category3",
+            "kind": "Grouping"
+        },
+        
+
+        {
+            "displayName": "MilestoneTaskStartDate",
+            "name": "MilestoneTaskStartDate",
+            "displayNameKey": "Visual_Category4",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "MilestoneTaskEndDate",
+            "name": "MilestoneTaskEndDate",
+            "displayNameKey": "Visual_Category5",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "MilestoneStatus",
+            "name": "MilestoneStatus",
+            "displayNameKey": "Visual_Category6",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "MilestoneOrder",
+            "name": "MilestoneOrder",
+            "displayNameKey": "Visual_Category7",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "isMilestone",
+            "name": "isMilestone",
+            "displayNameKey": "Visual_Category8",
+            "kind": "Grouping"
+        }
+    ],
+    "dataViewMappings": [
+        {
+            "table": {
+                "rows": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "category1"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "category2"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "MilestoneTaskName"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "MilestoneTaskStartDate"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "MilestoneTaskEndDate"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "isMilestone"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "MilestoneStatus"
+                            }
+                        },
+                        {
+                            "for": {
+                                "in": "MilestoneOrder"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

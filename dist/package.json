@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+    "author": {"name":"Julien Hinnekens","email":"julien.hinnekens@pwc.com"},
+    "resources": [
+        {
+            "resourceId": "rId0",
+            "sourceType": 5,
+            "file": "resources/milestoneViz15E2B7204D5B4D19A54D5217B9F634BF.pbiviz.json"
+        }
+    ],
+    "visual": {"name":"milestoneViz","displayName":"Milestone Viz","guid":"milestoneViz15E2B7204D5B4D19A54D5217B9F634BF","visualClassName":"Visual","version":"1.0.0","description":"To create a nice milestone vis based on MS project","supportUrl":"https://community.powerbi.com","gitHubUrl":""},
+    "metadata": {
+        "pbivizjson": {
+            "resourceId": "rId0"
+        }
+    }  
+}
