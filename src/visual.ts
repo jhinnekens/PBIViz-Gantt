@@ -70,6 +70,7 @@ export class Visual implements IVisual {
        
         this.target = options.element;
 
+
         if (document) {
 
 
@@ -89,7 +90,7 @@ export class Visual implements IVisual {
             this.drilledDown = false;
 
 
-            this.nextAvailabilityDayCount = 10;
+            this.nextAvailabilityDayCount = 5;
 
             this.totalweekDuration = this.planningEndDate.diff(this.planningStartDate, 'days');
 
@@ -315,7 +316,11 @@ export class Visual implements IVisual {
         let dateStartText = startDate.format("DD MMM YYYY");
         let dateEndText = endDate.format("DD MMM YYYY");
 
-        let endDateWithMarge = endDate;
+
+        
+
+
+        let endDateWithMarge = moment(endDate);
         endDateWithMarge.add(this.nextAvailabilityDayCount, 'days').format("YYYY-MM-DD");
 
         if (this.nextAvailabilities.length > 0)
@@ -384,7 +389,8 @@ export class Visual implements IVisual {
         {
             milestoneTask.classList.add("ganttview-task");
 
-            let duration = endDate.diff(startDate, 'days');
+            let duration = moment(endDate).startOf('d').add(1,'d').diff( moment(startDate).startOf('d'), 'd');
+
 
             milestoneTask.setAttribute("style", "left: " + this.cellsize * leftPos + "px;"
             + "top:" + (cellheightCount+ this.usedAvailability.rowHeight) * this.cellheight + "px;"
@@ -764,16 +770,18 @@ export class Visual implements IVisual {
             dataRow.MilestoneStatus = row[tableDataView.columns.filter((d) => d.roles.MilestoneStatus != undefined )[0].index];
             
             
-            //dataRow.isMilestone = row[5];
 
             dataRow.MilestoneTaskEndDate = row[tableDataView.columns.filter((d) => d.roles.MilestoneTaskEndDate != undefined )[0].index];
             dataRow.MilestoneOrder = row[tableDataView.columns.filter((d) => d.roles.MilestoneOrder != undefined )[0].index];
 
-
-            if (dataRow.MilestoneTaskStartDate == dataRow.MilestoneTaskEndDate)
+//dataRow.MilestoneTaskStartDate == dataRow.MilestoneTaskEndDate &&
+            
+            if (  row[tableDataView.columns.filter((d) => d.roles.isMilestone != undefined )[0].index] == 1)
                 dataRow.isMilestone = true;
             else
                 dataRow.isMilestone = false;
+
+            
 
             TableData.push(dataRow);
     
@@ -787,6 +795,7 @@ export class Visual implements IVisual {
 
         this.data = TableData;
         this.restoreDefaultFilter();
+
 
     }
 

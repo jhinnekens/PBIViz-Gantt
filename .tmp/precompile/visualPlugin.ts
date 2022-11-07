@@ -5,8 +5,8 @@ import VisualConstructorOptions = powerbiVisualsApi.extensibility.visual.VisualC
 import DialogConstructorOptions = powerbiVisualsApi.extensibility.visual.DialogConstructorOptions;
 var powerbiKey: any = "powerbi";
 var powerbi: any = window[powerbiKey];
-var milestoneViz15E2B7204D5B4D19A54D5217B9F634BF: IVisualPlugin = {
-    name: 'milestoneViz15E2B7204D5B4D19A54D5217B9F634BF',
+var milestoneViz15E2B7204D5B4D19A54D5217B9F634BF_DEBUG: IVisualPlugin = {
+    name: 'milestoneViz15E2B7204D5B4D19A54D5217B9F634BF_DEBUG',
     displayName: 'Milestone Viz',
     class: 'Visual',
     apiVersion: '3.8.0',
@@ -27,6 +27,6 @@ var milestoneViz15E2B7204D5B4D19A54D5217B9F634BF: IVisualPlugin = {
 if (typeof powerbi !== "undefined") {
     powerbi.visuals = powerbi.visuals || {};
     powerbi.visuals.plugins = powerbi.visuals.plugins || {};
-    powerbi.visuals.plugins["milestoneViz15E2B7204D5B4D19A54D5217B9F634BF"] = milestoneViz15E2B7204D5B4D19A54D5217B9F634BF;
+    powerbi.visuals.plugins["milestoneViz15E2B7204D5B4D19A54D5217B9F634BF_DEBUG"] = milestoneViz15E2B7204D5B4D19A54D5217B9F634BF_DEBUG;
 }
-export default milestoneViz15E2B7204D5B4D19A54D5217B9F634BF;
+export default milestoneViz15E2B7204D5B4D19A54D5217B9F634BF_DEBUG;
